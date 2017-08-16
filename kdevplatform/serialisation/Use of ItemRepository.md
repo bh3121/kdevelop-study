@@ -1,5 +1,28 @@
 ### KDevelop Repositories
 
+
+[Code Model](#code-model) 
+[Definition Map](#definition-map) 
+[Environment Lists](#environment-lists) 
+[Environment Information](#environment-information) 
+[Identifier Repository](#identifier-repository) 
+[Qualified Identifier Repository](#qualified-identifier-repository) 
+[Importer Map](#importer-map) 
+[Instantiation Information Repository](#instantiation-information-repository) 
+[Persistent Declaration Table](#persistent-declaration-table) 
+[Type Repository](#type-repository) 
+[Use Map](#use-map) 
+[file modification repository](#file-modification-repository) 
+[file modification sets](#file-modification-sets) 
+[Comment Repository](#comment-repository) 
+[Recursive Imports](#recursive-imports) 
+[String Index](#string-index) 
+[Counters](#counters) 
+[parsing_environment_data](#parsing_environment_data) 
+[available_top_context_indices](#available_top_context_indices) 
+
+
+> when a repository is created which uses ItemRepository , a seperate {Repository File Name}_dyanmic file will also be created
 ___
 
 #### Code Model
@@ -168,10 +191,10 @@ ___
 #### file modification sets
 
 ```
-
+ItemRepository<SetNodeData, SetNodeDataRequest, false, false, sizeof(SetNodeData)>
 ```
 
-__Location__ : \
+__Location__ : language/editor/modificationrevisionset.cpp:113 \
 __Class__ : 
 
 __Description__ 
@@ -181,36 +204,10 @@ ___
 #### Comment Repository
 
 ```
-
+ItemRepository<StringData, StringRepositoryItemRequest, false, true> 
 ```
 
-__Location__ : \
-__Class__ : 
-
-__Description__ 
-
-___
-
-#### Counters
-
-```
-
-```
-
-__Location__ : \
-__Class__ : 
-
-__Description__ 
-
-___
-
-#### parsing_environment_data
-
-```
-
-```
-
-__Location__ : \
+__Location__ : duchain/declaration.cpp:69 \
 __Class__ : 
 
 __Description__ 
@@ -220,10 +217,10 @@ ___
 #### Recursive Imports
 
 ```
-
+ItemRepository<SetNodeData, SetNodeDataRequest, false, false, sizeof(SetNodeData)>
 ```
 
-__Location__ : \
+__Location__ : duchain/topducontext.cpp:51 \
 __Class__ : 
 
 __Description__ 
@@ -233,12 +230,52 @@ ___
 #### String Index
 
 ```
-
+ItemRepository<IndexedStringData, IndexedStringRepositoryItemRequest, false, false>
 ```
 
-__Location__ : \
+__Location__ : serialization/indexedstring.cpp:159 \
+__Class__ : `IndexedStringRepositoryManager`
+
+__Description__ 
+
+___
+
+#### Counters
+
+```
+Not a ItemRepository just a file
+```
+
+__Location__ : serialization/itemrepositoryregistry.cpp:302 \
 __Class__ : 
 
 __Description__ 
 
 ___
+
+#### parsing_environment_data
+
+```
+Not a ItemRepository just a file
+```
+
+__Location__ : duchain/duchain.cpp:313 \
+__Class__ : `DUChainPrivate`
+
+__Description__ 
+
+___
+
+#### available_top_context_indices
+
+```
+Not a ItemRepository just a file
+```
+
+__Location__ : duchain/duchain.cpp:330 \
+__Class__ : `DUChainPrivate`
+
+__Description__ 
+
+___
+
