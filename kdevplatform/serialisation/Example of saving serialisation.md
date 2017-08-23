@@ -1,6 +1,6 @@
 #### __Initial Values for ItemRepository__
 
-```
+```cpp
 m_repositoryName = name provided
 m_registry = global item repository registery
 m_file = absolute path to file (Testing in this case)
@@ -18,7 +18,7 @@ m_firstBucketForHash = array of short unsigned of size bucketHashSize filled wit
 
 #### __Initial Values for Bucket__
 
-```
+```cpp
 
 enum {
 	AdditionalSpacePerItem = 2
@@ -57,7 +57,7 @@ m_lastUsed = 0
 
 #### __Example of an Item__
 
-```
+```cpp
 
 // hash function for the item is copy of ascii values of each character
 // let MyItemRequest::AverageSize = sizeof(MyItem) = 8
