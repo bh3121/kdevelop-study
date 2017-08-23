@@ -90,7 +90,7 @@ private:
 
 #### __Creating a Reposiroty__
 
-```
+```cpp
 /*
  * this will create and register ItemRepository in ~/.cache/kdevduchain/kdev_session_folder/
  * Two Files will be created Testing and Testing_dynamic
@@ -104,7 +104,7 @@ after above code contents of the Testing file is
 ![Testing File Contents](Testing_File_Contents1.png)
 
 after creating new repository
-```
+```cpp
 m_fileMapSize = 0;
 m_fileMap = nullptr;
 ```
@@ -113,7 +113,7 @@ m_fileMap = nullptr;
 
 ![Example Item](Example_MyItem.png)
 
-```
+```cpp
 MyItem *item = createItem("abcde");
 MyRequestItem mri(*item);
 
